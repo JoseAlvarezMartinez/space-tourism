@@ -1,22 +1,52 @@
 import Logo from "../assets/shared/logo.svg";
 import { Twirl as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
+
 const Index = () => {
   const [isOpen, setOpen] = useState(false);
-
+  useEffect(() => {
+    setOpen(false);
+  }, [useLocation().pathname]);
   return (
-    <header>
+    <header
+      className={`${
+        useLocation().pathname === "/destination" ? "planetas" : "presentacion"
+      }`}
+    >
       <div className="navegacion-superior">
-        <img className="logotipo" src={Logo} alt="Logotipo de Space Tourism" />
-        <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
+        <Link to={"/"}>
+          <img
+            className="logotipo"
+            src={Logo}
+            alt="Logotipo de Space Tourism"
+          />
+        </Link>
+        <div className="menu">
+          <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
+        </div>
       </div>
-      <div className="contenedor">
-        <h1>{"so, you want to travel to".toUpperCase()} <span>{"space".toUpperCase()}</span></h1>
-        <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
-      </div>
-      <div className="circulo-blanco">
-        <p>{"Explore".toUpperCase()}</p>
-      </div>
+      <nav
+        className={`${isOpen ? "navegacion-activa" : "navegacion-inactiva"}`}
+      >
+        <ul>
+          <li>
+            <Link to={"/"}>
+              <span>00</span> {"Home".toUpperCase()}
+            </Link>
+            <Link to={"/destination"}>
+              <span>01</span> {"Destination".toUpperCase()}
+            </Link>
+            <Link to={"/crew"}>
+              <span>02</span> {"crew".toUpperCase()}
+            </Link>
+            <Link to={"/technology"}>
+              <span>03</span> {"technology".toUpperCase()}
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
     </header>
   );
 };

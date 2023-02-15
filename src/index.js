@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Presentacion from './pages/Presentacion';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import Index from './pages/Index';
+import Destino from './pages/Destino';
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<Index/>
+    element:<Index/>,
+    children:[
+      {
+        index:true,
+        element:<Presentacion/>
+      },
+        {
+          path:"/destination",
+          element:<Destino/>
+        }
+    ] 
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

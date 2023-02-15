@@ -1,10 +1,15 @@
 * {
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 header {
-  background-image: url(./assets/home/background-home-mobile.jpg);
-  background-repeat: no-repeat;
   height: 100vh;
+  background-repeat: no-repeat;
+}
+.presentacion {
+  background-image: url(./assets/home/background-home-mobile.jpg);
+}
+.planetas {
+  background-image: url(./assets/destination/background-destination-mobile.jpg);
 }
 .logotipo {
   height: 2.5rem;
@@ -16,12 +21,47 @@ header {
   justify-content: space-between;
   margin: 0 1rem;
   padding-top: 2rem;
+  z-index: 2000;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 8rem;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+a span {
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.navegacion-inactiva {
+  display: none;
+}
+.navegacion-activa {
+  position: absolute;
+  right: 0rem;
+  background-color: #ffffff1e;
+  width: 60%;
+  height: 100vh;
+  top: 0;
+  padding-left: 2rem;
+  backdrop-filter: blur(10px);
+}
+.navegacion-activa a{
+  margin: 1rem 0;
 }
 .contenedor {
   padding-top: 3rem;
 }
-.contenedor p{
-  color:#fff;
+.menu{
+  z-index: 2000;
+}
+.contenedor p {
+  color: #fff;
   text-align: center;
   font-size: 1rem;
   margin-top: 2rem;
@@ -42,18 +82,28 @@ h1 span {
   font-size: 5rem;
   padding-top: rem;
 }
-.circulo-blanco{
+.circulo-blanco {
   margin: 0 auto;
   height: 10rem;
   width: 10rem;
   background-color: #fff;
   border-radius: 50%;
 }
-.circulo-blanco p{
+.circulo-blanco a {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   font-size: 1.6rem;
   font-weight: 300;
+  color: #000;
+}
+.planetas-h2 {
+  color: gray;
+  text-align: center;
+}
+.planetas-h2 span {
+  color: #fff;
+  font-weight: 300;
+  margin-left: 0.5rem;
 }
