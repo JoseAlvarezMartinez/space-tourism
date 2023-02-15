@@ -1,3 +1,59 @@
-*{
-  font-family: 'Lato', sans-serif;
+* {
+  font-family: 'Barlow', sans-serif;
+}
+header {
+  background-image: url(./assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.logotipo {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.navegacion-superior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding-top: 2rem;
+}
+.contenedor {
+  padding-top: 3rem;
+}
+.contenedor p{
+  color:#fff;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+h1 {
+  margin: 0;
+  color: #fff;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.3rem;
+}
+h1 span {
+  font-weight: 300;
+  font-size: 5rem;
+  padding-top: rem;
+}
+.circulo-blanco{
+  margin: 0 auto;
+  height: 10rem;
+  width: 10rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.circulo-blanco p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
