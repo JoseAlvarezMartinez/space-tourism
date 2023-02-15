@@ -1,32 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Presentacion from './pages/Presentacion';
-import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider} from "react-router-dom"
-import Index from './pages/Index';
-import Destino from './pages/Destino';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Presentacion from "./pages/Presentacion";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Index from "./pages/Index";
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Index/>,
-    children:[
+    path: "/",
+    element: <Index />,
+    children: [
       {
-        index:true,
-        element:<Presentacion/>
-      },
-        {
-          path:"/destination",
-          element:<Destino/>
-        }
-    ] 
-  }
-])
-const root = ReactDOM.createRoot(document.getElementById('root'));
+        index: true,
+        element: <Presentacion />,
+      }
+    ],
+  },
+]);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
