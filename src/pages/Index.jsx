@@ -1,20 +1,18 @@
 import Logo from "../assets/shared/logo.svg";
 import { Twirl as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, NavLink } from "react-router-dom";
 
 const Index = () => {
   const [isOpen, setOpen] = useState(false);
   useEffect(() => {
     setOpen(false);
-  }, [useLocation().pathname]);
+  }, [useLocation()]);
   return (
     <>
       <header
         className={`${
-          useLocation().pathname === "/destination" 
-            ? "planetas"
-            : "presentacion"
+          useLocation().pathname === "/" ? "presentacion" : "planetas"
         }`}
       >
         <div className="navegacion-superior">

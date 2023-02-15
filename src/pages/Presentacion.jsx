@@ -15,7 +15,7 @@ const Presentacion = () => {
         </p>
       </div>
       <div className="circulo-blanco">
-        <Link to={"/destination/1"}>{"Explore".toUpperCase()}</Link>
+        <Link to={"/destination"}>{"Explore".toUpperCase()}</Link>
       </div>
     </>
   );

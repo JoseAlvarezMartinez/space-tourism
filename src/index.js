@@ -5,6 +5,8 @@ import Presentacion from "./pages/Presentacion";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
+import Planetas from "./pages/Planetas";
+import PlanetaInformacion from "./pages/PlanetaInformacion";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,7 +15,17 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Presentacion />,
-      }
+      },
+      {
+        path: "/destination",
+        element: <Planetas />,
+        children: [
+          {
+            path: "/destination/:id",
+            element: <PlanetaInformacion />,
+          },
+        ],
+      },
     ],
   },
 ]);
