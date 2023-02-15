@@ -1,5 +1,5 @@
-import { useLocation,Link} from "react-router-dom";
-import {data} from "../data/data"
+import { useLocation, Link } from "react-router-dom";
+import { data } from "../data/data";
 const PlanetaInformacion = () => {
   const location = useLocation();
   return (
@@ -22,7 +22,8 @@ const PlanetaInformacion = () => {
           ))}
         </ul>
       </nav>
-      <h2>{location.state.nombre.toUpperCase()}</h2>
+      <h2 className="planeta-nombre">{location.state.nombre.toUpperCase()}</h2>
+      <p className="planeta-especificacion">{location.state.especificacion}</p>
     </>
   );
 };

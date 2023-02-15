@@ -149,3 +149,15 @@ h1 span {
   margin: 2.5rem auto;
   display: flex;
 }
+.planeta-nombre{
+  margin-top: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 4rem;
+}
+.planeta-especificacion{
+  color:#fff;
+  text-align: center;
+  margin: 1rem 1rem;
+}

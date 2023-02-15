@@ -27,7 +27,8 @@ const Planetas = () => {
               ))}
             </ul>
           </nav>
-          <h2>{luna.nombre.toUpperCase()}</h2>
+          <h2 className="planeta-nombre">{luna.nombre.toUpperCase()}</h2>
+          <p className="planeta-especificacion">{luna.especificacion}</p>
         </>
       )}
       <Outlet />
