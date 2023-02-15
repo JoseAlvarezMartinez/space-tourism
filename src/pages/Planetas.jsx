@@ -29,6 +29,8 @@ const Planetas = () => {
           </nav>
           <h2 className="planeta-nombre">{luna.nombre.toUpperCase()}</h2>
           <p className="planeta-especificacion">{luna.especificacion}</p>
+          <p className="planeta-distancia"> <span>{"avg. distance".toUpperCase()}</span> {luna.distancia.toUpperCase()}</p>
+      <p className="planeta-distancia tiempo"> <span>{"Est. travel time".toUpperCase()}</span> {luna.viaje.toUpperCase()}</p>
         </>
       )}
       <Outlet />

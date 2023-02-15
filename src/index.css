@@ -10,14 +10,15 @@ h2 span {
   font-family: "Bellefair", serif;
 }
 header {
-  height: 100vh;
   background-repeat: no-repeat;
 }
 .presentacion {
   background-image: url(./assets/home/background-home-mobile.jpg);
+  height: 100vh;
 }
 .planetas {
   background-image: url(./assets/destination/background-destination-mobile.jpg);
+  height: 100%;
 }
 .logotipo {
   height: 2.5rem;
@@ -28,8 +29,8 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 0 1rem;
-  padding-top: 2rem;
-  z-index: 2000;
+  padding-top: 1rem;
+  z-index: 2;
 }
 ul {
   list-style: none;
@@ -75,7 +76,7 @@ li {
   margin-top: 5rem;
 }
 .menu {
-  z-index: 2000;
+  z-index: 2;
 }
 .contenedor p {
   color: #fff;
@@ -128,36 +129,58 @@ h1 span {
   font-weight: 300;
   margin-left: 0.5rem;
 }
-.navegacion-planetas ul,.navegacion-planetas li{
+.navegacion-planetas ul,
+.navegacion-planetas li {
   margin: 0;
 }
-.navegacion-planetas ul{
+.navegacion-planetas ul {
   display: flex;
   justify-content: center;
 }
-.navegacion-planetas a{
+.navegacion-planetas a {
   color: #fff;
-  margin: 0 .6rem;
+  margin: 0 0.6rem;
   font-family: "Bellefair", serif;
-  transition: color .3s;
+  transition: color 0.3s;
 }
-.navegacion-planetas a:hover{
-  color: #D0D6F9;
+.navegacion-planetas a:hover {
+  color: #d0d6f9;
 }
-.planeta-imagen{
+.planeta-imagen {
   width: 50vw;
   margin: 2.5rem auto;
   display: flex;
 }
-.planeta-nombre{
+.planeta-nombre {
   margin-top: 2rem;
   margin-bottom: 0;
   text-align: center;
   color: #fff;
   font-size: 4rem;
 }
-.planeta-especificacion{
-  color:#fff;
+.planeta-especificacion {
+  color: #fff;
   text-align: center;
   margin: 1rem 1rem;
+  border-bottom: 0.1rem solid #d0d6f94b;
+  padding-bottom: 1rem;
+}
+.planeta-distancia {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.planeta-distancia span {
+  margin-top: 1rem;
+  font-weight: 200;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.tiempo {
+  margin: 0;
+  margin-top: .5rem;
+  padding-bottom: 1rem;
 }
