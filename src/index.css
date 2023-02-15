@@ -11,6 +11,8 @@ h2 span {
 }
 header {
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .presentacion {
   background-image: url(./assets/home/background-home-mobile.jpg);
@@ -19,6 +21,7 @@ header {
 .planetas {
   background-image: url(./assets/destination/background-destination-mobile.jpg);
   height: 100%;
+
 }
 .logotipo {
   height: 2.5rem;
