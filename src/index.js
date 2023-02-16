@@ -1,55 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Presentacion from "./pages/Presentacion";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
-import Planetas from "./pages/Planetas";
-import Luna from "./components/Luna";
+import Planeta from "./components/Planeta";
 import Crew from "./pages/Crew";
-import Informacion from "./components/Informacion";
-import Douglas from "./components/Douglas";
 import InformacionCrew from "./components/InformacionCrew";
-
+import Technology from "./pages/Technology";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Index />,
     children: [
       {
-        index: true,
-        element: <Presentacion />,
-      },
-      {
         path: "/destination",
-        element: <Planetas />,
-        children: [
-          {
-            index: true,
-            element: <Luna />,
-          },
-
-          {
-            path: "/destination/:id",
-            element: <Informacion />,
-          },
-        ],
+        element: <Planeta/>,
       },
       {
-        path: "/crew",
-        element: <Crew />,
-        children: [
-          {
-            index: true,
-            element: <Douglas />,
-          },
-          {
-            path: "/crew/:id",
-            element:<InformacionCrew/>
-          },
-        ],
-      },
+        path:"/destination/:id",
+        element:<Planeta/>
+      }
     ],
   },
 ]);
