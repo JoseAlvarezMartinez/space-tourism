@@ -2,7 +2,11 @@ import Luna from "../assets/destination/image-moon.webp";
 import Marte from "../assets/destination/image-mars.webp";
 import Europa from "../assets/destination/image-europa.webp";
 import Titan from "../assets/destination/image-titan.webp";
-export const data = [
+import Douglas from "../assets/crew/image-douglas-hurley.webp";
+import Mark from "../assets/crew/image-mark-shuttleworth.webp";
+import Victor from "../assets/crew/image-victor-glover.webp";
+import Anousheh from "../assets/crew/image-anousheh-ansari.webp";
+const data = [
   {
     nombre: "Moon",
     especificacion:
@@ -40,3 +44,34 @@ export const data = [
     id: 4,
   },
 ];
+const crew = [
+  {
+    nombre:"Douglas Hurley",
+    cargo:"Commander",
+    descripcion:"Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
+    img:Douglas,
+    id:1
+  },
+  {
+    nombre:"MARK SHUTTLEWORTH",
+    cargo:"Mission Specialist",
+    descripcion:"Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
+    img:Mark,
+    id:2
+  },
+  {
+    nombre:"Victor Glover",
+    cargo:"PILOT",
+    descripcion:"Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.",
+    img:Victor,
+    id:3
+  },
+  {
+    nombre:"Anousheh Ansari",
+    cargo:"Flight Engineer",
+    descripcion:"Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. ",
+    img:Anousheh,
+    id:4
+  },
+]
+export {data,crew}

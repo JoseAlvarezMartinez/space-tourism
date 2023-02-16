@@ -1,6 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import { data } from "../data/data";
-const PlanetaInformacion = () => {
+
+const Informacion = () => {
   const location = useLocation();
   return (
     <>
@@ -24,11 +25,18 @@ const PlanetaInformacion = () => {
       </nav>
       <h2 className="planeta-nombre">{location.state.nombre.toUpperCase()}</h2>
       <p className="planeta-especificacion">{location.state.especificacion}</p>
-      <p className="planeta-distancia"> <span>{"avg. distance".toUpperCase()}</span> {location.state.distancia.toUpperCase()}</p>
-      <p className="planeta-distancia tiempo"> <span>{"Est. travel time".toUpperCase()}</span> {location.state.viaje.toUpperCase()}</p>
-
+      <p className="planeta-distancia">
+        {" "}
+        <span>{"avg. distance".toUpperCase()}</span>{" "}
+        {location.state.distancia.toUpperCase()}
+      </p>
+      <p className="planeta-distancia tiempo">
+        {" "}
+        <span>{"Est. travel time".toUpperCase()}</span>{" "}
+        {location.state.viaje.toUpperCase()}
+      </p>
     </>
   );
 };
 
-export default PlanetaInformacion;
+export default Informacion;

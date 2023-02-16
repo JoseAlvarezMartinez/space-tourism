@@ -6,7 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
 import Planetas from "./pages/Planetas";
-import PlanetaInformacion from "./pages/PlanetaInformacion";
+import Luna from "./components/Luna";
+import Crew from "./pages/Crew";
+import Informacion from "./components/Informacion";
+import Douglas from "./components/Douglas";
+import InformacionCrew from "./components/InformacionCrew";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,8 +26,27 @@ const router = createBrowserRouter([
         element: <Planetas />,
         children: [
           {
+            index: true,
+            element: <Luna />,
+          },
+
+          {
             path: "/destination/:id",
-            element: <PlanetaInformacion />,
+            element: <Informacion />,
+          },
+        ],
+      },
+      {
+        path: "/crew",
+        element: <Crew />,
+        children: [
+          {
+            index: true,
+            element: <Douglas />,
+          },
+          {
+            path: "/crew/:id",
+            element:<InformacionCrew/>
           },
         ],
       },
