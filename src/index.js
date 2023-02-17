@@ -6,8 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
 import Planeta from "./components/Planeta";
 import Crew from "./pages/Crew";
-import InformacionCrew from "./components/InformacionCrew";
-import Technology from "./pages/Technology";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,11 +14,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/destination",
-        element: <Planeta/>,
+        element: <Planeta />,
       },
       {
-        path:"/destination/:id",
-        element:<Planeta/>
+        path: "/destination/:id",
+        element: <Planeta />,
+      },
+      {
+        path: "/crew",
+        element: <Crew />,
+      },
+      {
+        path:"/crew/:id",
+        element:<Crew/>
       }
     ],
   },

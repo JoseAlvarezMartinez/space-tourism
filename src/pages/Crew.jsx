@@ -1,12 +1,18 @@
 import { crew } from "../data/data";
-import { Outlet, Link} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import CrewData from "../components/CrewData";
 const Crew = () => {
+  const [tripulante1] = crew;
+  const location = useLocation();
   return (
     <>
-      <h2 className="planetas-h2">
-        02 <span>{`Meet your crew`.toUpperCase()}</span>
-      </h2>
-      <Outlet />
+      {location.pathname === "/crew" ? (
+        <CrewData tripulante={tripulante1} />
+      ) : (
+        <>
+          <CrewData tripulante={location.state} />
+        </>
+      )}
     </>
   );
 };

@@ -6,6 +6,7 @@ const Planeta = () => {
   const location = useLocation();
   return (
     <>
+    <h2 className="planetas-h2">01 <span>{"Pick your destination".toUpperCase()}</span></h2>
       {location.pathname === "/destination" ? (
         <>
           <img

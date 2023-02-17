@@ -14,7 +14,8 @@ const Index = () => {
       <header
         className={`${
           (location.pathname === "/" && "presentacion") ||
-          (location.pathname.includes("/destination") && "planetas")
+          (location.pathname.includes("/destination") && "planetas")||
+          (location.pathname.includes("/crew") && "crew")
         } `}
       >
         <div className="navegacion-superior">
