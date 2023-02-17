@@ -27,7 +27,7 @@ header {
 }
 .technology {
   background-image: url(./assets/technology/background-technology-mobile.jpg);
-  height: 100vh;
+  height: 105vh;
 }
 .logotipo {
   height: 2.5rem;
@@ -235,6 +235,10 @@ h1 span {
 .circulo-activo {
   background-color: #fff;
 }
+.activo {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5rem;
+}
 
 .contenedor-navegacion-tripulantes {
   display: flex;
@@ -254,13 +258,14 @@ h1 span {
   margin-left: 5.4rem;
 }
 .tecnologia-img {
-  width: 100vw;
+  width: 100%;
   height: 9rem;
   margin-top: 1rem;
 }
 
 .tecnologia-navegacion {
   border: 1px solid #ffffff73;
+  color: #fff;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -269,6 +274,10 @@ h1 span {
   align-items: center;
   margin: 1rem 0.5rem;
 }
+.tecnologia-navegacion-activa {
+  background-color: #fff;
+  color: #000;
+}
 .tecnologia-navegacion:hover {
   cursor: pointer;
 }
@@ -276,10 +285,29 @@ h1 span {
   color: #fff;
 }
 .tecnologia-centrar {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
 }
-.activo {
-  border-bottom: 2px solid #fff;
-  padding-bottom: 0.5rem;
+.tecnologia-navegacion-activa-child:first-child {
+  background-color: #fff;
+  color: #000;
+}
+.technology-h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.technology-h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.technology-p {
+  color: #fff;
+  text-align: center;
+  font-weight: 100;
+  margin: 0 .6rem;
+  padding-top: .5rem;
 }
