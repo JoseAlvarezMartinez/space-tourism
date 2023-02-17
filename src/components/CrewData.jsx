@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { crew } from "../data/data";
 const CrewData = ({ tripulante }) => {
+  const location = useLocation();
   return (
     <>
-        <h2 className="planetas-h2">02 <span>{"Meet your crew".toUpperCase()}</span></h2>
+      <h2 className="planetas-h2">
+        02 <span>{"Meet your crew".toUpperCase()}</span>
+      </h2>
       <img
         src={tripulante.img}
         className={`${
@@ -13,14 +16,17 @@ const CrewData = ({ tripulante }) => {
       />
       <div className="contenedor-navegacion-tripulantes">
         {crew.map((tripulante) => (
-          <Link
-            key={tripulante.id}
-            to={`/crew/${tripulante.id}`}
-            className="circulo-navegacion"
-            state={tripulante}
-          >
-            
-          </Link>
+            <Link
+              key={tripulante.id}
+              to={`/crew/${tripulante.id}`}
+              className={`${
+                location.pathname === `/crew/${tripulante.id}`
+                  ? "circulo-activo"
+                  : "circulo-navegacion"
+              }`}
+              state={tripulante}
+            ></Link>
+
         ))}
       </div>
       <h3 className="crew-h3">{tripulante.cargo.toUpperCase()}</h3>
