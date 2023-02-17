@@ -1,12 +1,15 @@
 import { data } from "../data/data";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 const Planeta = () => {
-  const [luna] = data
+  const [luna] = data;
   const { img, nombre, especificacion, distancia, viaje } = luna;
   const location = useLocation();
+  const params = useParams();
   return (
     <>
-    <h2 className="planetas-h2">01 <span>{"Pick your destination".toUpperCase()}</span></h2>
+      <h2 className="planetas-h2">
+        01 <span>{"Pick your destination".toUpperCase()}</span>
+      </h2>
       {location.pathname === "/destination" ? (
         <>
           <img
@@ -21,7 +24,12 @@ const Planeta = () => {
             <ul>
               {data.map((planeta) => (
                 <li key={planeta.id}>
-                  <Link to={`/destination/${planeta.id}`} state={planeta}>
+                  <Link
+                    className={`
+                  ${planeta.nombre === "Moon" ? "activo" : ""}`}
+                    to={`/destination/${planeta.id}`}
+                    state={planeta}
+                  >
                     {planeta.nombre.toUpperCase()}
                   </Link>
                 </li>
@@ -55,15 +63,25 @@ const Planeta = () => {
             <ul>
               {data.map((planeta) => (
                 <li key={planeta.id}>
-                  <Link to={`/destination/${planeta.id}`} state={planeta}>
+                  <Link
+                    className={`${
+                      planeta.id === Number(params.id) ? "activo" : ""
+                    }`}
+                    to={`/destination/${planeta.id}`}
+                    state={planeta}
+                  >
                     {planeta.nombre.toUpperCase()}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <h2 className="planeta-nombre">{location.state.nombre.toUpperCase()}</h2>
-          <p className="planeta-especificacion">{location.state.especificacion}</p>
+          <h2 className="planeta-nombre">
+            {location.state.nombre.toUpperCase()}
+          </h2>
+          <p className="planeta-especificacion">
+            {location.state.especificacion}
+          </p>
           <p className="planeta-distancia">
             {" "}
             <span>{"avg. distance".toUpperCase()}</span>{" "}

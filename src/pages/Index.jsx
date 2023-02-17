@@ -15,7 +15,8 @@ const Index = () => {
         className={`${
           (location.pathname === "/" && "presentacion") ||
           (location.pathname.includes("/destination") && "planetas")||
-          (location.pathname.includes("/crew") && "crew")
+          (location.pathname.includes("/crew") && "crew") ||
+          (location.pathname.includes("/technology") && "technology")
         } `}
       >
         <div className="navegacion-superior">

@@ -1,5 +1,5 @@
 import { crew } from "../data/data";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import CrewData from "../components/CrewData";
 const Crew = () => {
   const [tripulante1] = crew;

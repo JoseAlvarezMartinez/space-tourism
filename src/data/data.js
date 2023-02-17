@@ -7,8 +7,8 @@ import Mark from "../assets/crew/image-mark-shuttleworth.webp";
 import Victor from "../assets/crew/image-victor-glover.webp";
 import Anousheh from "../assets/crew/image-anousheh-ansari.webp";
 import Despegue from "../assets/technology/image-launch-vehicle-landscape.jpg"
-import Capsula from "../assets/technology/image-space-capsule-portrait.jpg"
-import Spaceport from "../assets/technology/image-spaceport-portrait.jpg"
+import Capsula from "../assets/technology/image-space-capsule-landscape.jpg"
+import Spaceport from "../assets/technology/image-spaceport-landscape.jpg"
 const data = [
   {
     nombre: "Moon",

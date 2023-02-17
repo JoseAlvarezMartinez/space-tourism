@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages/Index";
 import Planeta from "./components/Planeta";
 import Crew from "./pages/Crew";
+import Technology from "./pages/Technology";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,15 @@ const router = createBrowserRouter([
       {
         path:"/crew/:id",
         element:<Crew/>
-      }
+      },
+      {
+        path:"/technology",
+        element:<Technology />
+      },
+      {
+        path:"/technology/:id",
+        element:<Technology />
+      },
     ],
   },
 ]);
