@@ -253,9 +253,10 @@ h1 span {
   margin-left: 4.5rem;
 }
 .douglas {
-  margin: 1rem;
+  margin: 2.5rem 0;
+  margin-left: 3.5rem;
   width: 55vw;
-  margin-left: 5.4rem;
+
 }
 .tecnologia-img {
   width: 100%;
@@ -310,4 +311,11 @@ h1 span {
   font-weight: 100;
   margin: 0 .6rem;
   padding-top: .5rem;
+}
+
+
+
+.probando-img{
+  display: flex;
+  justify-content: center;
 }

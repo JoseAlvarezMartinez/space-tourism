@@ -8,13 +8,15 @@ const CrewData = ({ tripulante }) => {
       <h2 className="planetas-h2">
         02 <span>{"Meet your crew".toUpperCase()}</span>
       </h2>
-      <img
-        src={tripulante.img}
-        className={`${
-          tripulante.nombre.includes("Douglas") ? "douglas" : "tripulacion"
-        }`}
-        alt=""
-      />
+      <div className="probando-img">
+        <img
+          src={tripulante.img}
+          className={`${
+            tripulante.nombre.includes("Douglas") ? "douglas" : "tripulacion"
+          }`}
+          alt=""
+        />
+      </div>
       <div className="contenedor-navegacion-tripulantes">
         {crew.map((tripulante) => (
           <Link
@@ -22,7 +24,10 @@ const CrewData = ({ tripulante }) => {
             to={`/crew/${tripulante.id}`}
             className={` 
             ${
-              (location.pathname == "/crew") && (tripulante.nombre == "Douglas Hurley") ? "circulo-activo" : ""
+              location.pathname == "/crew" &&
+              tripulante.nombre == "Douglas Hurley"
+                ? "circulo-activo"
+                : ""
             }
               ${
                 tripulante.id === Number(params.id)
