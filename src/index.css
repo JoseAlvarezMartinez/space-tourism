@@ -247,10 +247,8 @@ h1 span {
 
 .tripulacion {
   max-width: 55vw;
-  margin: 2.5rem auto;
+  margin: 2.5rem 0;
   display: flex;
-  margin-bottom: 1rem;
-  margin-left: 4.5rem;
 }
 .douglas {
   margin: 2.5rem 0;

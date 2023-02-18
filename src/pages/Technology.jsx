@@ -1,13 +1,12 @@
 import { spacelaunch } from "../data/data";
-import { useLocation,useLoaderData } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import TechnologyData from "../components/TechnologyData";
 export function loader(){
   return spacelaunch
 }
 const Technology = () => {
   const location = useLocation();
-  const datos = useLoaderData()
-  const [despegue] = datos;
+  const [despegue] = spacelaunch;
   return (
     <>
       {location.pathname === "/technology" ? (
