@@ -7,7 +7,9 @@ import Index from "./pages/Index";
 import Planeta from "./components/Planeta";
 import Crew from "./pages/Crew";
 import Technology from "./pages/Technology";
-
+import { loader as SpaceLaunchLoader } from "./pages/Technology";
+import { loader as CrewLoader } from "./pages/Crew";
+import { loader as PlanetaLoader } from "./components/Planeta";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,26 +18,32 @@ const router = createBrowserRouter([
       {
         path: "/destination",
         element: <Planeta />,
+        loader:PlanetaLoader
       },
       {
         path: "/destination/:id",
         element: <Planeta />,
+        loader:PlanetaLoader
       },
       {
         path: "/crew",
         element: <Crew />,
+        loader: CrewLoader,
       },
       {
-        path:"/crew/:id",
-        element:<Crew/>
+        path: "/crew/:id",
+        element: <Crew />,
+        loader: CrewLoader,
       },
       {
-        path:"/technology",
-        element:<Technology />
+        path: "/technology",
+        element: <Technology />,
+        loader: SpaceLaunchLoader,
       },
       {
-        path:"/technology/:id",
-        element:<Technology />
+        path: "/technology/:id",
+        element: <Technology />,
+        loader: SpaceLaunchLoader,
       },
     ],
   },

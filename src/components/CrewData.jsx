@@ -1,6 +1,6 @@
-import { Link, useLocation, useParams } from "react-router-dom";
-import { crew } from "../data/data";
+import { Link, useLocation, useParams,useLoaderData } from "react-router-dom";
 const CrewData = ({ tripulante }) => {
+  const data = useLoaderData()
   const location = useLocation();
   const params = useParams();
   return (
@@ -18,7 +18,7 @@ const CrewData = ({ tripulante }) => {
         />
       </div>
       <div className="contenedor-navegacion-tripulantes">
-        {crew.map((tripulante) => (
+        {data.map((tripulante) => (
           <Link
             key={tripulante.id}
             to={`/crew/${tripulante.id}`}

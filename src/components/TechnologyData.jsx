@@ -1,10 +1,9 @@
-import { spacelaunch } from "../data/data";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
 
 const TechnologyData = ({ tecnologiaInfo }) => {
   const location = useLocation();
   const params = useParams();
-
+  const datos = useLoaderData();
   return (
     <>
       <h2 className="planetas-h2">
@@ -12,7 +11,7 @@ const TechnologyData = ({ tecnologiaInfo }) => {
       </h2>
       <img src={tecnologiaInfo.img} className="tecnologia-img" alt="" />
       <div className="tecnologia-centrar">
-        {spacelaunch.map((tecnologia) => (
+        {datos.map((tecnologia) => (
           <Link
             className={`tecnologia-navegacion ${
               location.pathname === "/technology"

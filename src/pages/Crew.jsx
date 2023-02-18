@@ -1,9 +1,13 @@
 import { crew } from "../data/data";
-import { useLocation } from "react-router-dom";
+import { useLocation,useLoaderData } from "react-router-dom";
 import CrewData from "../components/CrewData";
+export function loader(){
+  return crew
+}
 const Crew = () => {
-  const [tripulante1] = crew;
   const location = useLocation();
+  const data = useLoaderData()
+  const [tripulante1] = data;
   return (
     <>
       {location.pathname === "/crew" ? (

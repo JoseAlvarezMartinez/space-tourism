@@ -1,7 +1,11 @@
+import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
 import { data } from "../data/data";
-import { Link, useLocation, useParams } from "react-router-dom";
+export function loader(){
+  return data
+}
 const Planeta = () => {
-  const [luna] = data;
+  const infoPlaneta = useLoaderData()
+  const [luna] = infoPlaneta;
   const { img, nombre, especificacion, distancia, viaje } = luna;
   const location = useLocation();
   const params = useParams();
@@ -22,7 +26,7 @@ const Planeta = () => {
           />
           <nav className="navegacion-planetas">
             <ul>
-              {data.map((planeta) => (
+              {infoPlaneta.map((planeta) => (
                 <li key={planeta.id}>
                   <Link
                     className={`
@@ -61,7 +65,7 @@ const Planeta = () => {
           />
           <nav className="navegacion-planetas">
             <ul>
-              {data.map((planeta) => (
+              {infoPlaneta.map((planeta) => (
                 <li key={planeta.id}>
                   <Link
                     className={`${
