@@ -2,8 +2,9 @@ import Logo from "../assets/shared/logo.svg";
 import { Twirl as Hamburger } from "hamburger-react";
 import { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
-
+import { useMediaQuery } from "react-responsive";
 const Index = () => {
+  const tablet = useMediaQuery({ query: "(min-width: 650px)" });
   const [isOpen, setOpen] = useState(false);
   const location = useLocation();
   useEffect(() => {
@@ -14,7 +15,7 @@ const Index = () => {
       <header
         className={`${
           (location.pathname === "/" && "presentacion") ||
-          (location.pathname.includes("/destination") && "planetas")||
+          (location.pathname.includes("/destination") && "planetas") ||
           (location.pathname.includes("/crew") && "crew") ||
           (location.pathname.includes("/technology") && "technology")
         } `}
@@ -27,38 +28,86 @@ const Index = () => {
               alt="Logotipo de Space Tourism"
             />
           </Link>
-          <div className="menu">
-            <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
-          </div>
+          {!tablet && (
+            <div className="menu">
+              <Hamburger color="#fff" toggled={isOpen} toggle={setOpen} />
+            </div>
+          )}
+
+          <nav
+            className={`${
+              isOpen ? "navegacion-activa" : "navegacion-inactiva"
+            }`}
+          >
+            <ul>
+              <li
+                className={`${location.pathname === "/" && "borde-inferior"}`}
+              >
+                <Link to={"/"}>
+                  {tablet ? (
+                    "Home".toUpperCase()
+                  ) : (
+                    <>
+                      <span>00</span> {"Home".toUpperCase()}
+                    </>
+                  )}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className={`${
+                    location.pathname.includes("/destination") &&
+                    "borde-inferior"
+                  }`}
+                  to={"/destination"}
+                >
+                  {tablet ? (
+                    "Destination".toUpperCase()
+                  ) : (
+                    <>
+                      <span>01</span> {"Destination".toUpperCase()}
+                    </>
+                  )}
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className={`${
+                    location.pathname.includes("/crew") && "borde-inferior"
+                  }`}
+                  to={"/crew"}
+                >
+                  {tablet ? (
+                    "crew".toUpperCase()
+                  ) : (
+                    <>
+                      <span>02</span> {"crew".toUpperCase()}
+                    </>
+                  )}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className={`${
+                    location.pathname.includes("/technology") &&
+                    "borde-inferior"
+                  }`}
+                  to={"/technology"}
+                >
+                  {tablet ? (
+                    "Technology".toUpperCase()
+                  ) : (
+                    <>
+                      <span>03</span> {"Technology".toUpperCase()}
+                    </>
+                  )}
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav
-          className={`${isOpen ? "navegacion-activa" : "navegacion-inactiva"}`}
-        >
-          <ul>
-            <li>
-              <Link to={"/"}>
-                <span>00</span> {"Home".toUpperCase()}
-              </Link>
-            </li>
-
-            <li>
-              <Link to={"/destination"}>
-                <span>01</span> {"Destination".toUpperCase()}
-              </Link>
-            </li>
-
-            <li>
-              <Link to={"/crew"}>
-                <span>02</span> {"crew".toUpperCase()}
-              </Link>
-            </li>
-            <li>
-              <Link to={"/technology"}>
-                <span>03</span> {"technology".toUpperCase()}
-              </Link>
-            </li>
-          </ul>
-        </nav>
         {location.pathname === "/" && (
           <div className="contenedor">
             <h1>

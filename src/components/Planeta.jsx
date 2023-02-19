@@ -1,10 +1,10 @@
 import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
 import { data } from "../data/data";
-export function loader(){
-  return data
+export function loader() {
+  return data;
 }
 const Planeta = () => {
-  const infoPlaneta = useLoaderData()
+  const infoPlaneta = useLoaderData();
   const [luna] = infoPlaneta;
   const { img, nombre, especificacion, distancia, viaje } = luna;
   const location = useLocation();
@@ -16,14 +16,7 @@ const Planeta = () => {
       </h2>
       {location.pathname === "/destination" ? (
         <>
-          <img
-            src={img}
-            style={{
-              width: "50vw",
-              margin: "2.5rem auto",
-              display: "flex",
-            }}
-          />
+          <img src={img} className={"planeta-img"} />
           <nav className="navegacion-planetas">
             <ul>
               {infoPlaneta.map((planeta) => (
@@ -42,27 +35,22 @@ const Planeta = () => {
           </nav>
           <h2 className="planeta-nombre">{nombre.toUpperCase()}</h2>
           <p className="planeta-especificacion">{especificacion}</p>
-          <p className="planeta-distancia">
-            {" "}
-            <span>{"avg. distance".toUpperCase()}</span>{" "}
-            {distancia.toUpperCase()}
-          </p>
-          <p className="planeta-distancia tiempo">
-            {" "}
-            <span>{"Est. travel time".toUpperCase()}</span>{" "}
-            {viaje.toUpperCase()}
-          </p>
+          <div className="tablet-contenedor">
+            <p className="planeta-distancia">
+              {" "}
+              <span>{"avg. distance".toUpperCase()}</span>{" "}
+              {distancia.toUpperCase()}
+            </p>
+            <p className="planeta-distancia tiempo">
+              {" "}
+              <span>{"Est. travel time".toUpperCase()}</span>{" "}
+              {viaje.toUpperCase()}
+            </p>
+          </div>
         </>
       ) : (
         <>
-          <img
-            src={location.state.img}
-            style={{
-              width: "50vw",
-              margin: "2.5rem auto",
-              display: "flex",
-            }}
-          />
+          <img className="planeta-img" src={location.state.img} />
           <nav className="navegacion-planetas">
             <ul>
               {infoPlaneta.map((planeta) => (
@@ -86,16 +74,18 @@ const Planeta = () => {
           <p className="planeta-especificacion">
             {location.state.especificacion}
           </p>
-          <p className="planeta-distancia">
-            {" "}
-            <span>{"avg. distance".toUpperCase()}</span>{" "}
-            {location.state.distancia.toUpperCase()}
-          </p>
-          <p className="planeta-distancia tiempo">
-            {" "}
-            <span>{"Est. travel time".toUpperCase()}</span>{" "}
-            {location.state.viaje.toUpperCase()}
-          </p>
+          <div className="tablet-contenedor">
+            <p className="planeta-distancia">
+              {" "}
+              <span>{"avg. distance".toUpperCase()}</span>{" "}
+              {location.state.distancia.toUpperCase()}
+            </p>
+            <p className="planeta-distancia tiempo">
+              {" "}
+              <span>{"Est. travel time".toUpperCase()}</span>{" "}
+              {location.state.viaje.toUpperCase()}
+            </p>
+          </div>
         </>
       )}
     </>

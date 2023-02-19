@@ -8,7 +8,7 @@ const CrewData = ({ tripulante }) => {
       <h2 className="planetas-h2">
         02 <span>{"Meet your crew".toUpperCase()}</span>
       </h2>
-      <div className="probando-img">
+      <div className="contenedor-img">
         <img
           src={tripulante.img}
           className={`${
