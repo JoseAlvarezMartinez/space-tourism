@@ -27,8 +27,8 @@ const CrewData = ({ tripulante }) => {
           to={`/crew/${tripulante.id}`}
           className={` 
           ${
-            location.pathname == "/crew" &&
-            tripulante.nombre == "Douglas Hurley"
+            location.pathname === "/crew" &&
+            tripulante.nombre === "Douglas Hurley"
               ? "circulo-activo"
               : ""
           }
@@ -54,8 +54,8 @@ const CrewData = ({ tripulante }) => {
             to={`/crew/${tripulante.id}`}
             className={` 
             ${
-              location.pathname == "/crew" &&
-              tripulante.nombre == "Douglas Hurley"
+              location.pathname === "/crew" &&
+              tripulante.nombre === "Douglas Hurley"
                 ? "circulo-activo"
                 : ""
             }

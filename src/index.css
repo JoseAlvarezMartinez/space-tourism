@@ -23,11 +23,11 @@ header {
 }
 .crew {
   background-image: url(./assets/crew/background-crew-desktop.jpg);
- height: 114vh;
+ height: 110vh;
 }
 .technology {
   background-image: url(./assets/technology/background-technology-desktop.jpg);
-  height: 105vh;
+  height: 100vh;
 }
 .logotipo {
   height: 2.5rem;
@@ -245,15 +245,12 @@ h1 span {
   justify-content: center;
 }
 
-.tripulacion {
-  width: 12rem;
-  margin: 2.5rem 0;
+.tripulacion,.douglas {
+  width: 11rem;
   display: flex;
 }
 .douglas {
-  margin: 2.5rem 0;
   margin-left: 3.5rem;
-  width: 12rem;
 }
 .tecnologia-img {
   width: 100%;
@@ -312,6 +309,7 @@ h1 span {
 .contenedor-img {
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 @media only screen and (min-width: 650px) {
@@ -361,14 +359,27 @@ h1 span {
     margin-right: 6rem;
     margin-left: 6rem;
   }
-  .contenedor-img img{
-    margin-bottom: 0;
-    width: 14rem;
-  }
+.douglas{
+  margin: 0;
+  width: 15rem;
+}
+.tripulacion{
+  width: 12rem;
+}
+.tecnologia-img{
+  height: 15rem;
+}
   .crew-p{
     margin: 1rem 9rem;
   }
   .crew-h3{
     margin-top: 3rem;
   }
+  .technology-p{
+    margin: 0 8.6rem;
+  }
+  .technology{
+    height: 110vh;
+  }
+
 }
