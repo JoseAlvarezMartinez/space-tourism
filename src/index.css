@@ -23,8 +23,7 @@ header {
 }
 .crew {
   background-image: url(./assets/crew/background-crew-desktop.jpg);
-  max-height: 124vmax;
-  min-height: 115vmax;
+ height: 114vh;
 }
 .technology {
   background-image: url(./assets/technology/background-technology-desktop.jpg);
@@ -316,6 +315,10 @@ h1 span {
 }
 
 @media only screen and (min-width: 650px) {
+  .planetas-h2{
+    text-align: start;
+    margin-left: 3rem;
+  }
   .navegacion-inactiva {
     display: flex;
     background-color: rgba(128, 128, 128, 0.15);
@@ -357,5 +360,15 @@ h1 span {
   .contenedor p{
     margin-right: 6rem;
     margin-left: 6rem;
+  }
+  .contenedor-img img{
+    margin-bottom: 0;
+    width: 14rem;
+  }
+  .crew-p{
+    margin: 1rem 9rem;
+  }
+  .crew-h3{
+    margin-top: 3rem;
   }
 }
