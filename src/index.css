@@ -24,7 +24,7 @@ header {
 .crew {
   background-image: url(./assets/crew/background-crew-desktop.jpg);
   max-height: 124vmax;
-  min-height: 108vmax;
+  min-height: 90vmax;
 }
 .technology {
   background-image: url(./assets/technology/background-technology-desktop.jpg);
@@ -307,7 +307,7 @@ h1 span {
   color: #fff;
   text-align: center;
   font-weight: 100;
-  margin: 0 0.6rem;
+  margin: 0 1.6rem;
   padding-top: 0.5rem;
 }
 .contenedor-img {
@@ -316,10 +316,6 @@ h1 span {
 }
 
 @media only screen and (min-width: 650px) {
-  .contenedor {
-    width: 33rem;
-    margin: 0 auto;
-  }
   .navegacion-inactiva {
     display: flex;
     background-color: rgba(128, 128, 128, 0.15);
@@ -342,20 +338,24 @@ h1 span {
     border-bottom: 0.2rem solid #fff;
     padding-bottom: 2rem;
   }
-  .planeta-especificacion{
+  .planeta-especificacion {
     margin: 1rem 4rem;
   }
   .planeta-img {
     width: 40vw;
   }
-  .tablet-contenedor{
+  .tablet-contenedor {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5rem;
   }
-  .tiempo{
+  .tiempo {
     padding-bottom: 0;
     margin: 0;
+  }
+  .contenedor p{
+    margin-right: 6rem;
+    margin-left: 6rem;
   }
 }
