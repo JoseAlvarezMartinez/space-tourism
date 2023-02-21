@@ -19,11 +19,10 @@ header {
 }
 .planetas {
   background-image: url(./assets/destination/background-destination-desktop.jpg);
-  height: 100%;
 }
 .crew {
   background-image: url(./assets/crew/background-crew-desktop.jpg);
- height: 110vh;
+  height: 114vh;
 }
 .technology {
   background-image: url(./assets/technology/background-technology-desktop.jpg);
@@ -245,7 +244,8 @@ h1 span {
   justify-content: center;
 }
 
-.tripulacion,.douglas {
+.tripulacion,
+.douglas {
   width: 11rem;
   display: flex;
 }
@@ -313,11 +313,12 @@ h1 span {
 }
 
 @media only screen and (min-width: 650px) {
-  .planetas-h2{
+  .planetas-h2 {
     text-align: start;
     margin-left: 3rem;
   }
   .navegacion-inactiva {
+    backdrop-filter: blur(10px);
     display: flex;
     background-color: rgba(128, 128, 128, 0.15);
     position: relative;
@@ -355,31 +356,99 @@ h1 span {
     padding-bottom: 0;
     margin: 0;
   }
-  .contenedor p{
+  .contenedor p {
     margin-right: 6rem;
     margin-left: 6rem;
   }
-.douglas{
-  margin: 0;
-  width: 15rem;
-}
-.tripulacion{
-  width: 12rem;
-}
-.tecnologia-img{
-  height: 15rem;
-}
-  .crew-p{
+  .douglas {
+    margin: 0;
+    width: 15rem;
+  }
+  .tripulacion {
+    width: 12rem;
+  }
+  .tecnologia-img {
+    height: 15rem;
+  }
+  .crew-p {
     margin: 1rem 9rem;
   }
-  .crew-h3{
+  .crew-h3 {
     margin-top: 3rem;
   }
-  .technology-p{
+  .technology-p {
     margin: 0 8.6rem;
   }
-  .technology{
+  .technology {
     height: 110vh;
   }
-
+}
+@media only screen and (min-width: 850px) {
+  .presentacion {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+  }
+  .contenedor {
+    align-items: center;
+    flex-direction: row;
+  }
+  .circulo-blanco {
+    padding: 2.5rem;
+  }
+  .circulo-blanco a {
+    font-size: 2rem;
+  }
+  .contenedor p {
+    margin-top: 0;
+    min-width: 10rem;
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  h1 span {
+    font-size: 8rem;
+  }
+  .contenedor-info {
+    width: 40rem;
+  }
+  .navegacion-inactiva::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30rem;
+    width: 30rem;
+    height: .1rem;
+    background-color: #ffffff6c;
+  }
+  .navegacion-superior{
+    padding-top: 3rem;
+  }
+  .planetas{
+    height: 110vh;
+  }
+  .desktop-planetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .planeta-img{
+    width: 30vw;
+  }
+  .navegacion-planetas{
+    display: flex;
+  }
+  .planeta-nombre{
+    text-align: start;
+  }
+  .planeta-especificacion{
+    width: 27rem;
+    margin: 0;
+    text-align: start;
+  }
+  .tablet-contenedor{
+    justify-content: start;
+  }
+  .planetas-contenedor{
+    width: 52%;
+  }
 }

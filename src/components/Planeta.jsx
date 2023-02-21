@@ -15,8 +15,9 @@ const Planeta = () => {
         01 <span>{"Pick your destination".toUpperCase()}</span>
       </h2>
       {location.pathname === "/destination" ? (
-        <>
+        <div className="desktop-planetas">
           <img src={img} className={"planeta-img"} />
+          <div className="planetas-contenedor">
           <nav className="navegacion-planetas">
             <ul>
               {infoPlaneta.map((planeta) => (
@@ -47,10 +48,12 @@ const Planeta = () => {
               {viaje.toUpperCase()}
             </p>
           </div>
-        </>
+        </div>
+        </div>
       ) : (
-        <>
+        <div className="desktop-planetas">
           <img className="planeta-img" src={location.state.img} />
+          <div className="planetas-contenedor">
           <nav className="navegacion-planetas">
             <ul>
               {infoPlaneta.map((planeta) => (
@@ -86,7 +89,8 @@ const Planeta = () => {
               {location.state.viaje.toUpperCase()}
             </p>
           </div>
-        </>
+          </div>
+        </div>
       )}
     </>
   );
