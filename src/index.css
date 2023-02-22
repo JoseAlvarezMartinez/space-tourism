@@ -382,6 +382,12 @@ h1 span {
   .technology {
     height: 110vh;
   }
+  .contenedor-crew {
+    flex-direction: column;
+  }
+  .testing {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 850px) {
   .presentacion {
@@ -411,44 +417,101 @@ h1 span {
   .contenedor-info {
     width: 40rem;
   }
-  .navegacion-inactiva::before{
+  .navegacion-inactiva::before {
     content: "";
     position: absolute;
     top: 50%;
     left: -30rem;
     width: 30rem;
-    height: .1rem;
+    height: 0.1rem;
     background-color: #ffffff6c;
   }
-  .navegacion-superior{
+  .navegacion-superior {
     padding-top: 3rem;
   }
-  .planetas{
+  .planetas {
     height: 110vh;
   }
-  .desktop-planetas{
+  .desktop-planetas {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .planeta-img{
+  .planeta-img {
     width: 30vw;
   }
-  .navegacion-planetas{
+  .navegacion-planetas {
     display: flex;
   }
-  .planeta-nombre{
+  .planeta-nombre {
     text-align: start;
   }
-  .planeta-especificacion{
+  .planeta-especificacion {
     width: 27rem;
     margin: 0;
     text-align: start;
   }
-  .tablet-contenedor{
+  .tablet-contenedor {
     justify-content: start;
   }
-  .planetas-contenedor{
+  .planetas-contenedor {
     width: 52%;
+  }
+  .contenedor-crew {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 53rem;
+    margin: 0 auto;
+  }
+  .testing {
+    width: 60%;
+    margin-left: 4rem;
+  }
+  .douglas {
+    width: 20rem;
+  }
+  .tripulacion {
+    width: 17rem;
+  }
+  .crew-p {
+    margin: 1rem 0;
+    width: 23rem;
+    text-align: start;
+  }
+  .crew-h2,
+  .crew-h3 {
+    text-align: start;
+  }
+  .contenedor-navegacion-tripulantes {
+    justify-content: start;
+  }
+  .technology-p {
+    margin: 0;
+  }
+  .technology-contenedor {
+    display: flex;
+    flex-direction: row-reverse;
+    place-items: center;
+    margin: 0 auto;
+    max-width: 65rem;
+    gap: 4rem;
+  }
+  .technology-contenedor img {
+    width: 25rem;
+  }
+  .tecnologia-centrar {
+    display: block;
+  }
+  .informacion{
+    width: 23rem;
+    margin-left: 2rem;
+  }
+  .technology-contenedor-nav {
+    display: flex;
+    align-items: center;
+  }.tecnologia-navegacion{
+    width: 5rem;
+    height: 5rem;
   }
 }
